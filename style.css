@@ -1,0 +1,93 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333030;
+    font-family: helvetica;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Reduzi o espaçamento para melhor adaptação */
+    flex-wrap: wrap; /* Permite que os cartões se ajustem em telas menores */
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 355px;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 15px;
+}
+
+.user-info h2 {
+    color: rgb(48, 47, 47);
+}
+
+.user-info p {
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: rgb(3, 14, 114);
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    background-color: #0077b5;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Cores específicas para cada rede social */
+.social-links a.facebook { background-color: #1877f2; }
+.social-links a.instagram { background-color: #e1306c; }
+.social-links a.linkedin { background-color: #0077b5; }
+.social-links a.github { background-color: #333; color: black; }
+
+
+.social-links a i { width: auto; height: auto; display: inline-block; }
+
+.social-links a:hover { opacity: 0.8; }
+
+@media (max-width: 450px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .user-card {
+        width: 90%; /* Melhor adaptação para telas pequenas */
+        max-width: 350px;
+        margin-bottom: 15px;
+    }
+}
